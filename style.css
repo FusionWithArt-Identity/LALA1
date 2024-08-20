@@ -9,6 +9,12 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 body::before {
     content: none;
@@ -27,7 +33,7 @@ body::before {
 }
 
 #login-form {
-    width: 40%;
+    width: 80%;
     padding: 40px;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -39,7 +45,7 @@ body::before {
 }
 
 #login-form input[type="password"] {
-    width: 90%;
+    width: 70%;
     height: 40px;
     margin-bottom: 20px;
     padding: 10px;
@@ -48,7 +54,7 @@ body::before {
 }
 
 #login-form button[type="button"] {
-    width: 100%;
+    width: 40%;
     height: 40px;
     background-color: #4CAF50;
     color: #fff;
@@ -90,21 +96,34 @@ body::before {
 }
 
 #name {
-    border-right: 0.15em solid transparent;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 0;
-    opacity: 0;
-    font-family: Garamond, sans-serif;
-    font-weight: light;
-    margin-bottom: 30px;
+  resize: none;
+  width: 100%;
+  font-family: 'Garamond', serif;
+  font-weight: light;
+  border: none;
+  background-color: transparent;
+  font-size: 26px;
+  line-height: 1.5;
+}
+
+#name {
+display: none;
 }
 
 #name.animate {
-    animation: typewriter 3s steps(40) 2s forwards;
-    opacity: 1;
+  animation: typewriter 2s steps(40);
+opacity: 1;
 }
 
+.italic-textarea {
+  font-style: italic;
+}
+textarea {
+  touch-action: pinch-zoom;
+}
+textarea {
+  zoom: 1;
+}
 #subheading {
     font-family: 'Lucida Handwriting', cursive;
     text-align: center;
@@ -170,6 +189,13 @@ body::before {
         width: 80%;
         border-radius: 20px;
     }
+}
+
+@media only screen and (max-width: 768px) {
+  #textbox-area {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
